@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Maultaschen", "id": 1166}, "date": "2023-08-25T23:19:34.760756+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "Random", "id": 2825}, "type": "correct", "id": 3383}], "meta": {"count": 1}}

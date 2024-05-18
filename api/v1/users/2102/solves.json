@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "pwnagaukar", "id": 420}, "date": "2023-08-27T11:57:48.614788+00:00", "challenge_id": 30, "challenge": {"name": "Infected", "category": "Forensics", "value": 100, "id": 30}, "user": {"name": "Brynjarog", "id": 2102}, "type": "correct", "id": 7761}], "meta": {"count": 1}}

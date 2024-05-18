@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "ascii_overflow", "id": 320}, "date": "2023-08-25T20:34:28.742792+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "TNAR5", "id": 587}, "type": "correct", "id": 2719}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "FluxFingers", "id": 981}, "date": "2023-08-25T19:39:04.105101+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "p4ck3t0", "id": 2805}, "type": "correct", "id": 2478}], "meta": {"count": 1}}

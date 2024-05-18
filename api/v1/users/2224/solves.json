@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "L3AK", "id": 786}, "date": "2023-08-26T04:27:29.654134+00:00", "challenge_id": 20, "challenge": {"name": "DEF CON Invitation", "category": "Forensics", "value": 100, "id": 20}, "user": {"name": "4ut0p5y", "id": 2224}, "type": "correct", "id": 4149}], "meta": {"count": 1}}

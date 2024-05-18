@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "IITBreachers", "id": 1112}, "date": "2023-08-27T13:54:15.023261+00:00", "challenge_id": 20, "challenge": {"name": "DEF CON Invitation", "category": "Forensics", "value": 100, "id": 20}, "user": {"name": "nemesis", "id": 1134}, "type": "correct", "id": 7971}], "meta": {"count": 1}}

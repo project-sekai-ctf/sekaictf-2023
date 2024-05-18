@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "L3AK", "id": 786}, "date": "2023-08-26T12:02:55.551541+00:00", "challenge_id": 26, "challenge": {"name": "Guardians of the Kernel", "category": "Reverse", "value": 100, "id": 26}, "user": {"name": "0xnil", "id": 1523}, "type": "correct", "id": 5196}], "meta": {"count": 1}}

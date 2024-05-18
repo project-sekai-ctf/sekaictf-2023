@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "IQ-toppene", "id": 733}, "date": "2023-08-25T20:28:45.681348+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "olefredrik", "id": 2040}, "type": "correct", "id": 2700}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "pwnverse crew", "id": 453}, "date": "2023-08-26T15:29:18.065807+00:00", "challenge_id": 20, "challenge": {"name": "DEF CON Invitation", "category": "Forensics", "value": 100, "id": 20}, "user": {"name": "CMDJO-QAIS", "id": 3009}, "type": "correct", "id": 5684}], "meta": {"count": 1}}

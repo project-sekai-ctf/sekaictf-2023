@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Straw Hat", "id": 883}, "date": "2023-08-25T16:55:36.723822+00:00", "challenge_id": 11, "challenge": {"name": "Network Tools", "category": "Pwn", "value": 100, "id": 11}, "user": {"name": "Nightu", "id": 2295}, "type": "correct", "id": 993}], "meta": {"count": 1}}

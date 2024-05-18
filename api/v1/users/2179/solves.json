@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "randint", "id": 1073}, "date": "2023-08-26T10:13:03.422832+00:00", "challenge_id": 4, "challenge": {"name": "I love this world", "category": "Misc", "value": 100, "id": 4}, "user": {"name": "rand(0,1)", "id": 2179}, "type": "correct", "id": 4957}], "meta": {"count": 1}}

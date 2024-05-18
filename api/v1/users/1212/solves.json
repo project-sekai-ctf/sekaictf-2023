@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Monke Prison", "id": 622}, "date": "2023-08-26T06:24:37.773750+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "agj1ss", "id": 1212}, "type": "correct", "id": 4461}], "meta": {"count": 1}}

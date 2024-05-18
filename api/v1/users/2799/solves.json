@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "AkaSec", "id": 944}, "date": "2023-08-27T09:22:51.897057+00:00", "challenge_id": 40, "challenge": {"name": "Cosmic Ray", "category": "Pwn", "value": 100, "id": 40}, "user": {"name": "beadam", "id": 2799}, "type": "correct", "id": 7523}], "meta": {"count": 1}}

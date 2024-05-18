@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "CyKor", "id": 1100}, "date": "2023-08-26T14:47:42.156166+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "ipwning", "id": 2390}, "type": "correct", "id": 5596}], "meta": {"count": 1}}

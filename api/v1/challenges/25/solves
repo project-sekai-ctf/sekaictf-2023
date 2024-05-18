@@ -1,0 +1,1 @@
+{"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. You have requested this URI [/api/v1/challenges/25/solves] but did you mean /api/v1/challenges/<challenge_id>/solves or /api/v1/challenges/<challenge_id>/files or /api/v1/challenges/<challenge_id>/flags ?"}

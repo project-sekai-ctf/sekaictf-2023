@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Under The Hood", "id": 752}, "date": "2023-08-25T16:45:40.259075+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "goatlord14", "id": 714}, "type": "correct", "id": 844}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "SIGINT", "id": 1050}, "date": "2023-08-26T00:32:21.602696+00:00", "challenge_id": 34, "challenge": {"name": "Wiki Game", "category": "PPC", "value": 100, "id": 34}, "user": {"name": "thrypuro", "id": 2884}, "type": "correct", "id": 3567}], "meta": {"count": 1}}

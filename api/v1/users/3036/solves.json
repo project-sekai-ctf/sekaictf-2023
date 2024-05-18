@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "ENOFLAG", "id": 943}, "date": "2023-08-26T02:23:40.029868+00:00", "challenge_id": 16, "challenge": {"name": "Noisy CRC", "category": "Cryptography", "value": 244, "id": 16}, "user": {"name": "Hennich", "id": 3036}, "type": "correct", "id": 3848}], "meta": {"count": 1}}

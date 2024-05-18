@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "captchaflag", "id": 731}, "date": "2023-08-25T17:15:49.822114+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "bscott2", "id": 2417}, "type": "correct", "id": 1352}], "meta": {"count": 1}}

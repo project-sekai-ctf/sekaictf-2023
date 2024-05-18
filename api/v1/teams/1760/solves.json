@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Torgnoles", "id": 1760}, "date": "2023-08-26T17:23:45.003484+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "EyeXion", "id": 3618}, "type": "correct", "id": 5989}], "meta": {"count": 1}}

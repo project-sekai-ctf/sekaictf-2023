@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "APT-71800", "id": 330}, "date": "2023-08-26T06:52:57.729299+00:00", "challenge_id": 7, "challenge": {"name": "cryptoGRAPHy 1", "category": "Cryptography", "value": 100, "id": 7}, "user": {"name": "deviloper", "id": 3286}, "type": "correct", "id": 4525}], "meta": {"count": 1}}

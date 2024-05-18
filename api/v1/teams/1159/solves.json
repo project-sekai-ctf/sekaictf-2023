@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "onlyMe", "id": 1159}, "date": "2023-08-25T20:23:45.788386+00:00", "challenge_id": 34, "challenge": {"name": "Wiki Game", "category": "PPC", "value": 100, "id": 34}, "user": {"name": "leunaut", "id": 2411}, "type": "correct", "id": 2685}], "meta": {"count": 1}}

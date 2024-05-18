@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "El3ctronic", "id": 74}, "date": "2023-08-26T01:56:12.704036+00:00", "challenge_id": 11, "challenge": {"name": "Network Tools", "category": "Pwn", "value": 100, "id": 11}, "user": {"name": "hakuya", "id": 3048}, "type": "correct", "id": 3782}], "meta": {"count": 1}}

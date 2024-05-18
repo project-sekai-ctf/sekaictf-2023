@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "r3billions", "id": 1220}, "date": "2023-08-26T10:11:05.868110+00:00", "challenge_id": 30, "challenge": {"name": "Infected", "category": "Forensics", "value": 100, "id": 30}, "user": {"name": "rootk1d", "id": 3137}, "type": "correct", "id": 4950}], "meta": {"count": 1}}

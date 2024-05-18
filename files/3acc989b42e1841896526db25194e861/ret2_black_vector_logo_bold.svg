@@ -1,0 +1,82 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 288" width="864" height="288">
+	<title>ret2_white_vector_logo_bold-pdf</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h864v288h-864z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m498.29 107.35l37.01 48.58h-17.73l-34.52-47.25h-6.07v47.25h-14.62v-111.67h17.73c10.42 0 21.62 0.15 30.95 5.18 9.8 5.48 15.39 16 15.39 26.66 0 16-11.19 29.33-28.14 31.25zm-17.42-50.65h-3.89v40.43h4.67c14.93 0 31.1-2.66 31.1-20.44 0-17.47-17.42-19.99-31.88-19.99zm152.25 86.49v12.74h-62.98v-111.67h62.98v12.74h-48.36v31.25h46.96v12.73h-46.96v42.21zm72.94-86.19v98.93h-14.62v-98.93h-27.84v-12.74h70.29v12.74zm134.21 98.93h-75.73l51.32-59.98c4.82-5.63 10.42-12.59 10.42-20 0-11.7-10.89-21.32-23.02-21.32-11.97 0-21.77 9.18-22.55 20.43h-14.62c2.34-19.84 15.87-33.17 37.17-33.17 19.91 0 37.01 14.07 37.01 33.47 0 8.29-3.26 16.59-8.71 22.96l-38.56 44.87h47.27z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m462.24 244.39v-69.12h378.43v69.12zm29.86-55.52c4.18 0 6.83 1.68 8.88 4.96l5.51-3.15c-3.01-5.1-8.08-7.97-14.25-7.97-8.37 0-16.3 5.11-16.3 13.64 0 7.35 5.73 10.77 12.04 13.36l3.82 1.54c4.78 1.89 9.55 4.34 9.55 10 0 5.53-4.26 10.29-10.21 10.29-5.95 0-10.8-4.2-10.72-10.01l-6.98 1.4c1.18 8.47 8.15 14.76 17.11 14.76 9.92 0 17.7-6.85 17.7-16.44 0-8.81-5.87-12.94-13.73-15.88l-3.97-1.46c-3.45-1.26-7.71-3.43-7.71-7.56 0-4.62 4.85-7.48 9.26-7.48zm64.11-5.04l-13.59 22.52-13.59-22.52h-7.93l18.07 29.8v22.94h6.9v-22.94l18.07-29.8zm39.44 5.04c4.18 0 6.83 1.68 8.89 4.96l5.5-3.15c-3.01-5.1-8.07-7.97-14.24-7.97-8.38 0-16.31 5.11-16.31 13.64 0 7.35 5.73 10.77 12.05 13.36l3.81 1.54c4.78 1.89 9.55 4.34 9.55 10 0 5.53-4.26 10.29-10.21 10.29-5.95 0-10.79-4.2-10.72-10.01l-6.98 1.4c1.18 8.47 8.16 14.76 17.12 14.76 9.91 0 17.7-6.85 17.7-16.44 0-8.81-5.88-12.94-13.74-15.88l-3.96-1.46c-3.46-1.26-7.71-3.43-7.71-7.56 0-4.62 4.84-7.48 9.25-7.48zm62.79-5.04h-33.2v6.02h13.15v46.72h6.9v-46.72h13.15zm46.19 46.72h-22.84v-19.93h22.18v-6.02h-22.18v-14.76h22.84v-6.01h-29.74v52.74h29.74zm64.56-48.97l-19.02 41.55-19.03-41.55-11.31 54.98h7.13l6.46-34.83h0.15l16.6 35.95 16.59-35.95h0.15l6.46 34.83h7.13zm44.21 7.27c4.18 0 6.83 1.68 8.89 4.97l5.5-3.15c-3.01-5.1-8.08-7.97-14.24-7.97-8.38 0-16.31 5.11-16.31 13.64 0 7.34 5.73 10.77 12.05 13.36l3.81 1.54c4.78 1.89 9.55 4.33 9.55 10 0 5.53-4.26 10.28-10.21 10.28-5.95 0-10.79-4.19-10.72-10l-6.98 1.4c1.18 8.46 8.16 14.76 17.12 14.76 9.91 0 17.7-6.86 17.7-16.44 0-8.81-5.88-12.94-13.74-15.88l-3.96-1.47c-3.46-1.25-7.72-3.42-7.72-7.55 0-4.62 4.85-7.49 9.26-7.49z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp4">
+			<path d="m127.81 244.09l-104.97-99.97 104.97-99.97 104.96 99.97zm0-9.94l94.53-90.03-94.53-90.03-94.52 90.03z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp5">
+			<path d="m325.21 244.41l-105.06-99.99 105.06-99.99 105.07 99.99zm0-9.94l94.62-90.05-94.62-90.06-94.62 90.06z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp6">
+			<path d="m127.58 235.28l-95.91-91.34 95.91-91.34 95.91 91.34zm0-9.95l85.46-81.39-85.46-81.4-85.47 81.4z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img5" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp7">
+			<path d="m325.15 235.28l-95.91-91.34 95.91-91.34 95.9 91.34zm0-9.95l85.47-81.39-85.47-81.4-85.46 81.4z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp8">
+			<path d="m155.93 17.63l6.1-5.81 136.47 129.96-6.11 5.82z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img7" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp9">
+			<path d="m159.48 14.27l6.11-5.81 136.46 129.96-6.11 5.82z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img8" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp10">
+			<path d="m154.49 147.23l6.1-5.81 136.46 129.96-6.1 5.82z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img9" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp11">
+			<path d="m158.04 143.87l6.11-5.81 136.46 129.96-6.11 5.82z"/>
+		</clipPath>
+		<image  width="864" height="288" id="img10" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAEgAQMAAADom4KiAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAADVJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4MnqgAAHKXD0zAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Page 1" clip-path="url(#cp1)">
+		<g id="Mask" clip-path="url(#cp2)">
+			<use id="Bitmap" href="#img1" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp3)">
+			<use id="Bitmap" href="#img2" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp4)">
+			<use id="Bitmap" href="#img3" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp5)">
+			<use id="Bitmap" href="#img4" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp6)">
+			<use id="Bitmap" href="#img5" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp7)">
+			<use id="Bitmap" href="#img6" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp8)">
+			<use id="Bitmap" href="#img7" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp9)">
+			<use id="Bitmap" href="#img8" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp10)">
+			<use id="Bitmap" href="#img9" x="0" y="0"/>
+		</g>
+		<g id="Mask" clip-path="url(#cp11)">
+			<use id="Bitmap" href="#img10" x="0" y="0"/>
+		</g>
+	</g>
+</svg>

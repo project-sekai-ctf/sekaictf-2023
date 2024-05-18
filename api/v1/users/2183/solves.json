@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Tower of Hanoi", "id": 1066}, "date": "2023-08-25T19:07:03.029493+00:00", "challenge_id": 11, "challenge": {"name": "Network Tools", "category": "Pwn", "value": 100, "id": 11}, "user": {"name": "mebeim", "id": 2183}, "type": "correct", "id": 2323}], "meta": {"count": 1}}

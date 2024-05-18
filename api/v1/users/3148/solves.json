@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Babbage Patch Kids", "id": 1502}, "date": "2023-08-26T03:40:46.866134+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "birch", "id": 3148}, "type": "correct", "id": 4062}], "meta": {"count": 1}}

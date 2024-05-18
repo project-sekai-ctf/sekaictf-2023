@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Absurdo", "id": 910}, "date": "2023-08-27T08:48:32.481150+00:00", "challenge_id": 40, "challenge": {"name": "Cosmic Ray", "category": "Pwn", "value": 100, "id": 40}, "user": {"name": "Absurdo", "id": 1816}, "type": "correct", "id": 7494}], "meta": {"count": 1}}

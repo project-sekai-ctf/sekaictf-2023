@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "NOOP", "id": 1970}, "date": "2023-08-27T11:49:54.723598+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "kspark", "id": 3963}, "type": "correct", "id": 7754}], "meta": {"count": 1}}

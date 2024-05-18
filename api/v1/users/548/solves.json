@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Kappa", "id": 298}, "date": "2023-08-27T00:49:13.888894+00:00", "challenge_id": 9, "challenge": {"name": "cryptoGRAPHy 3", "category": "Cryptography", "value": 400, "id": 9}, "user": {"name": "IntensifiedFailure", "id": 548}, "type": "correct", "id": 6831}], "meta": {"count": 1}}

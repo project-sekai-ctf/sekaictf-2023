@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Slovak Cyber Team", "id": 1064}, "date": "2023-08-26T09:54:34.874488+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "siberiachew", "id": 2162}, "type": "correct", "id": 4917}], "meta": {"count": 1}}

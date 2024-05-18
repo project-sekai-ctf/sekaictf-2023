@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project SEKAI CTF 2023</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SekaiCTF 2023" />
+    <meta property="og:description" content="SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team." />
+    <meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+    <meta property="og:type" content="website" />
+	<link rel="shortcut icon" href="/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg">
+    <script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+
+    
+    <link rel="stylesheet" href="/themes/luna/static/assets/main.9dd62106.css">
+    
+
+    
+
+    <script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "e318b656bbae3f61ab453fc45a2c0906624b617726e8de3d3f9c5bc0948c868b",
+            'userMode': "teams",
+            'smallIcon': "/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1692979200,
+            'end': 1693152000,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "ic:baseline-discord", "social_link_url": "https://discord.gg/6gk7jhCgGX", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+
+    <style>
+  @font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+
+@font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+</style>
+</head>
+
+<body>
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+        <filter id="primaryIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="accentIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology"/>
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
+            <feComposite in="flood" in2="morphology" operator="in" result="composite2"/>
+            <feMerge result="merge">
+                    <feMergeNode in="composite2"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+        </filter>
+        <linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+            <stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+        </linearGradient>
+    </svg>
+
+    
+<div class="triangleContainer">
+    <div class="controlRow">
+        <div class="titleContainer">
+            <button class="button iconButton" id="backButton" aria-label="Go back" title="Go back">
+                <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            </button>
+            <div class="titleGroup">
+                <h1 class="title">Teams</h1>
+                <h2 class="subtitle"><span>Charlie&#39;s Angels</span></h2>
+            </div>
+        </div>
+        <div class="filler"></div>
+        
+        <button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+    <iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+    <h2 class="modalHeader">Menu</h2>
+    <div class="modalBody">
+        
+            <a class="button textButton shade primaryIcon" href="/rules">
+                <iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+                <span>Rules</span>
+            </a>
+        
+
+        
+            
+                <a class="button textButton shade primaryIcon" href="/teams">
+                    <iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+                    <span>Teams</span>
+                </a>
+            
+
+            <a class="button textButton shade primaryIcon" href="/users">
+                <iconify-icon icon="ic:baseline-person"></iconify-icon>
+                <span>Users</span>
+            </a>
+        
+
+        
+            <a class="button textButton shade primaryIcon" href="/scoreboard">
+                <iconify-icon icon="mdi:podium"></iconify-icon>
+                <span>Ranking</span>
+            </a>
+        
+
+        <a class="button textButton alternate" href="/">
+            <iconify-icon icon="ic:baseline-home"></iconify-icon>
+            <span>Home</span>
+        </a>
+
+        <a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+            <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            <span>Title</span>
+        </a>
+
+        
+
+            
+                <a class="button textButton alternate" id="mainMenuTitleBtn" href="/register">
+                    <iconify-icon icon="mdi:account-plus"></iconify-icon>
+                    <span>Register</span>
+                </a>
+            
+
+            <a class="button textButton alternate" id="mainMenuTitleBtn" href="/login">
+                <iconify-icon icon="mdi:login-variant"></iconify-icon>
+                <span>Log in</span>
+            </a>
+        
+    </div>
+    <div class="modalFooter">
+        <button class="button textButton shade" id="mainMenuClose">
+            <span>Close</span>
+        </button>
+    </div>
+</dialog>
+    </div>
+    <div class="tabs" id="tabbedView">
+        <div class="filler"></div>
+        
+<button class="tab active" data-target="tabMembers">Members</button>
+<button class="tab" data-target="tabSolves">Solves</button>
+<button class="tab" data-target="tabBreakdown">Breakdown</button>
+<button class="tab" data-target="tabTimeline">Timeline</button>
+
+        <div class="filler"></div>
+    </div>
+    <div class="contentWrapper tabbed">
+        
+<div x-data="TeamGraphs" style="height: 100%;">
+<div class="frameContentWrap">
+  
+
+
+</div>
+
+<div class="tabPane" id="tabMembers">
+  <div class="frameContentWrapper">
+
+    <div class="profileDetailGroup">
+      <div class="profileMeta">
+        <div class="profileMetaRow">
+          <span class="chip tall">Team</span>
+          <div class="profileMetaBox" id="team-id" data-ctfd-team-id="459">
+            Charlie&#39;s Angels
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="profileRank">
+        <label class="chip">Rank</label>
+        
+        <div class="profileRankNumber">384</div>
+        
+      </div>
+    </div>
+
+    
+
+    <h3 class="sectionTitle">Members</h3>
+    
+    
+    <a class="listItem" href="/users/840">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/0dcc8b84e28b69a5c04a1f4bb2f1bc60?d=404" data-fallback="https://avatars.dicebear.com/api/initials/JackIce.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">JackIce</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/843">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/d904762288aa603265fee5df1eb48278?d=404" data-fallback="https://avatars.dicebear.com/api/initials/arsachs.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">arsachs</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/844">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f810cfe1d2929cd17f4503abcaccc6da?d=404" data-fallback="https://avatars.dicebear.com/api/initials/bfrederick.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">bfrederick</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/845">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9b871252f8d4ed5456df58664d6838cc?d=404" data-fallback="https://avatars.dicebear.com/api/initials/cwnaze.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">cwnaze</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/846">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/ab296132832b11d8e954b31daca73e5a?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Kieran.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Kieran</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/847">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/d79c5222db3100be06ba948077411601?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Mj.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Mj</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/848">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/3a822326de168313f83305208b26db3b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/John+Villanueva.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">John Villanueva</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/849">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/576b88d59cb4acc666e4a8ba1349819b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Cool+J.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Cool J</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/850">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/4220c9a5384d07420eaf3538c233d15c?d=404" data-fallback="https://avatars.dicebear.com/api/initials/hc.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">hc</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/851">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f68f8b0e16b2424e2d035cc524d1440b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Janderson.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Janderson</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/852">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/221714f519442b98ec0e94c55c85d8e4?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Will17.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Will17</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/855">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/34b3cc1239aaa5b18eb1f085a4ac0334?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Lilwachter.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Lilwachter</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/856">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/cf57b93bd38dc8dd8bc4519859415fcc?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Teeddy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Teeddy</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/857">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e6ab2b0c3d2f5879123fd06ffe285216?d=404" data-fallback="https://avatars.dicebear.com/api/initials/mattkoco.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">mattkoco</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/858">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/3956e8e92144eb010489e68240107509?d=404" data-fallback="https://avatars.dicebear.com/api/initials/RespectTheFancy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">RespectTheFancy</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/860">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/64e03da8e0b2fb78ce2a07dc5ddd66d2?d=404" data-fallback="https://avatars.dicebear.com/api/initials/agalonsozana.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">agalonsozana</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/864">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/8ede567b464989181bd13e15b1ca6158?d=404" data-fallback="https://avatars.dicebear.com/api/initials/alexboulay.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">alexboulay</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/865">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/61177b9f48f48a0f8aedff821d4ce18a?d=404" data-fallback="https://avatars.dicebear.com/api/initials/sessdaddy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">sessdaddy</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/866">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/2de5e22df7bd44f37fa4acb4282e45a4?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Evan+Maddox.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Evan Maddox</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/867">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/617cfcd99a36ee9dc96b56383f7b373b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/fc1340.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">fc1340</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/868">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/ce6df33fa47299ff7865507753928e6e?d=404" data-fallback="https://avatars.dicebear.com/api/initials/jhkeller.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">jhkeller</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/869">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/fa5d28df515178d0e3fdfe4058846cb2?d=404" data-fallback="https://avatars.dicebear.com/api/initials/kcooke.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">kcooke</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/873">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/7d0cd69bacb42fd8db9eb2bc7eb562ba?d=404" data-fallback="https://avatars.dicebear.com/api/initials/swdavis2025.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">swdavis2025</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/874">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/a03f412b49cca1c67377c7b3c73df14f?d=404" data-fallback="https://avatars.dicebear.com/api/initials/DoctorCraft.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">DoctorCraft</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/916">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1425a233224baa2bad1d3bdee49089e3?d=404" data-fallback="https://avatars.dicebear.com/api/initials/dkellerr.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">dkellerr</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/917">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/146af0af15227606d3892158cb3ea2ec?d=404" data-fallback="https://avatars.dicebear.com/api/initials/emomron.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">emomron</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/921">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/31c6f830198206a7ea29837ac9294946?d=404" data-fallback="https://avatars.dicebear.com/api/initials/zzzslidingforvonzzz.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">zzzslidingforvonzzz</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/926">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/b31e4cd0cca96d3a52e244550f9ba9e4?d=404" data-fallback="https://avatars.dicebear.com/api/initials/AriRogo.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">AriRogo</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">178</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="hidden tabPane" id="tabSolves">
+  <div class="frameContentWrapper">
+    
+    
+    <a class="listItem" href="/challenges#▻ Survey-15">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▻ Survey</div>
+        <div>Misc, solved on <time data-time="2023-08-27T12:28:54.299751Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#I love this world-4">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">I love this world</div>
+        <div>Misc, solved on <time data-time="2023-08-26T15:54:03.333250Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#▶ Sanity Check-1">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▶ Sanity Check</div>
+        <div>Misc, solved on <time data-time="2023-08-25T16:01:31.307593Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">178</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="hidden tabPane" id="tabBreakdown">
+  <div class="frameContentWrapper progressBarCharts">
+    
+    
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Solve percentages</h3>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+          :style="{ width: `${getSolvePercentage()}%`, 'background-color': 'rgb(0, 209, 64)' }">
+        </div><div class="progress-bar" role="progressbar"
+          :style="{ width: `${getFailPercentage()}%`, 'background-color': 'rgb(207, 38, 0)' }">
+        </div></div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
+        </svg>
+        <small x-text="`Solves (${getSolvePercentage().toFixed(2)}%)`"></small>
+      </div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)" />
+        </svg>
+        <small x-text="`Fails (${getFailPercentage().toFixed(2)}%)`"></small>
+      </div>
+    </div>
+
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Category breakdown</h3>
+      <div class="progress">
+        <template x-for="category in getCategoryBreakdown()" :key="category.name">
+          <div class="progress-bar" role="progressbar"
+            :style="{ width: `${category.percent}%`, 'background-color': category.color }">
+          </div>
+        </template>
+      </div>
+      <template x-for="category in getCategoryBreakdown()" :key="category.name">
+        <div class="progressBarLegend">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="5" :fill="category.color" />
+          </svg>
+          <small x-text="`${category.name} (${category.percent.toFixed(2)}%)`"></small>
+        </div>
+      </template>
+    </div>
+    
+
+  </div>
+</div>
+<div class="hidden tabPane" id="tabTimeline">
+  <div class="chartContainer">
+    
+    <div id="score-graph" x-ref="scoregraph" style="width: 100%; height: 100%;">
+      Loading...
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script>
+    
+
+
+    
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=382bbb56");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=382bbb56");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=382bbb56");
+        --stripe-border: url("/themes/luna/static/img/stripe-border.svg?d=382bbb56");
+    }
+</style>
+
+
+<script>
+    window.TEAM =
+    {"account_id": 459, "id": 459, "name": "Charlie\u0027s Angels", "type": "team"}
+</script>
+
+<script defer type="module" src="/themes/luna/static/assets/module.esm.860ebcbd.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script><script defer type="module" src="/themes/luna/static/assets/userscore.c5e46586.js"></script><script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/scoreboard.a9375541.js"></script><script defer type="module" src="/themes/luna/static/assets/team_profile.465b8b0d.js"></script>
+
+
+    
+
+    <style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=382bbb56");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=382bbb56");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=382bbb56");
+            --inter-variable: url("/themes/luna/static/fonts/InterVariable.woff2?d=382bbb56");
+            --inter-variable-italic: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=382bbb56");
+        }
+    </style>
+
+    <script>
+  document.querySelectorAll("#tabScoreboard img.cellBodyIcon").forEach(e => e.loading = "lazy");
+</script>
+</body>
+
+</html>

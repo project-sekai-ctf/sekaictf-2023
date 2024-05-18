@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "r3billions", "id": 1220}, "date": "2023-08-26T12:54:00.369934+00:00", "challenge_id": 20, "challenge": {"name": "DEF CON Invitation", "category": "Forensics", "value": 100, "id": 20}, "user": {"name": "manosaelmans", "id": 3068}, "type": "correct", "id": 5332}], "meta": {"count": 1}}

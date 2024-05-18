@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "The Flat Network Society", "id": 936}, "date": "2023-08-25T21:30:34.259069+00:00", "challenge_id": 42, "challenge": {"name": "Frog-WAF", "category": "Web", "value": 413, "id": 42}, "user": {"name": "BitK", "id": 2367}, "type": "correct", "id": 2948}], "meta": {"count": 1}}

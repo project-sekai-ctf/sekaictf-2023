@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Heaven's_Birds", "id": 1251}, "date": "2023-08-25T18:26:32.634995+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "cynex", "id": 2745}, "type": "correct", "id": 2096}], "meta": {"count": 1}}

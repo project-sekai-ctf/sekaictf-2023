@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "/dev/nvme0n1p1", "id": 1389}, "date": "2023-08-25T21:04:35.868326+00:00", "challenge_id": 1, "challenge": {"name": "\u25b6 Sanity Check", "category": "Misc", "value": 39, "id": 1}, "user": {"name": "trubasnorlax", "id": 2909}, "type": "correct", "id": 2840}], "meta": {"count": 1}}

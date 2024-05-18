@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "PakCTF", "id": 1671}, "date": "2023-08-26T12:41:30.494685+00:00", "challenge_id": 1, "challenge": {"name": "\u25b6 Sanity Check", "category": "Misc", "value": 39, "id": 1}, "user": {"name": "AmeenSec", "id": 3474}, "type": "correct", "id": 5294}], "meta": {"count": 1}}

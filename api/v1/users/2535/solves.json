@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "t_casual_section", "id": 1218}, "date": "2023-08-26T19:20:22.826620+00:00", "challenge_id": 11, "challenge": {"name": "Network Tools", "category": "Pwn", "value": 100, "id": 11}, "user": {"name": "bababoy", "id": 2535}, "type": "correct", "id": 6273}], "meta": {"count": 1}}

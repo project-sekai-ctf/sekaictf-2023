@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "cr3.mov", "id": 1020}, "date": "2023-08-25T17:14:24.588533+00:00", "challenge_id": 29, "challenge": {"name": "Eval Me", "category": "Forensics", "value": 100, "id": 29}, "user": {"name": "cay", "id": 2463}, "type": "correct", "id": 1327}], "meta": {"count": 1}}

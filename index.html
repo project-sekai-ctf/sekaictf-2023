@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project SEKAI CTF 2023</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SekaiCTF 2023" />
+    <meta property="og:description" content="SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team." />
+    <meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+    <meta property="og:type" content="website" />
+	<link rel="shortcut icon" href="/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg">
+    <script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+
+    
+    <link rel="stylesheet" href="/themes/luna/static/assets/main.9dd62106.css">
+    
+
+    
+
+    <script type="text/javascript">
+        window.init = {
+'archived': true,
+            'urlRoot': "",
+            'csrfNonce': "e318b656bbae3f61ab453fc45a2c0906624b617726e8de3d3f9c5bc0948c868b",
+            'userMode': "teams",
+            'smallIcon': "/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1692979200,
+            'end': 1693152000,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "ic:baseline-discord", "social_link_url": "https://discord.gg/6gk7jhCgGX", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+
+    <style>
+  @font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+
+@font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+</style>
+</head>
+
+<body>
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+        <filter id="primaryIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="accentIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology"/>
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
+            <feComposite in="flood" in2="morphology" operator="in" result="composite2"/>
+            <feMerge result="merge">
+                    <feMergeNode in="composite2"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+        </filter>
+        <linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+            <stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+        </linearGradient>
+    </svg>
+
+    
+<div id="homeWrapper">
+    <div class="homeContent">
+        <div class="homeScreen">
+            <img class="logo" src="/files/b7e5e1a74e590c5dfc9724a4313dd198/sekai2_SEKAI_CTF_Wide_Black.svg" alt="Project SEKAI CTF" />
+            <time id="homeCountdown">...</time>
+            <time id="homeLocalDate">...</time>
+            <code><time id="homeISODate">...</time></code>
+        </div>
+        <div class="indexListingsWrapper">
+<div class="heading">Prizes</div>
+<a class="prizes" href="/rules">
+<div class="prizePoolRow">
+<iconify-icon icon="carbon:badge" style="font-size: 4rem;"></iconify-icon>
+<div class="prizePoolLabel">Total prize pool</div>
+<div class="prizePoolValue">
+<div class="prizePoolTotal"><sup>US$</sup>16,000+</div>
+<div class="prizePoolCash">incl. $3,000 cash prize</div>
+</div>
+</div>
+<div class="prizeCell prizeCell5">
+<div class="prizeCellTitle">First place</div>
+<div class="prizeCellValue">
+<span class="prizeCellValueNumber"><sup>$</sup>5,000</span><br>
+incl. $1,024 cash prize
+</div>
+</div>
+<div class="prizeCell prizeCell5">
+<div class="prizeCellTitle">Second place</div>
+<div class="prizeCellValue">
+<span class="prizeCellValueNumber"><sup>$</sup>3,500</span><br>
+incl. $512 cash prize
+</div>
+</div>
+<div class="prizeCell prizeCell5">
+<div class="prizeCellTitle">Third place</div>
+<div class="prizeCellValue">
+<span class="prizeCellValueNumber"><sup>$</sup>2,400</span><br>
+incl. $256 cash prize
+</div>
+</div>
+</a>
+<div class="heading">Sponsors</div>
+<ol class="sponsorsGrid sponsors">
+<li><a href="https://osec.io/"><img src="/files/65964dc9892c605f0f95414102d58908/ottersec.svg" alt="OtterSec" class="sponsorLogo" /></a></li>
+<li><a href="https://www.hackthebox.com/"><img src="/files/024cc0ef56e5584724ac0a0d53831ae2/htb.svg" alt="Hack the Box" class="sponsorLogo" /></a></li>
+<li><a href="https://www.sec3.dev/"><img src="/files/27096b521b870fd54e2c166998438921/sec3.svg" alt="Sec3" class="sponsorLogo"/></a></li>
+<li><a href="https://trailofbits.com"><img src="/files/2cc1313a5bc0bb804c31262650d751f9/trailofbits.svg" alt="Trail of Bits" class="sponsorLogo" style="transform: scale(1)" /></a></li>
+<li><a href="https://www.offensive-security.com/"><img src="/files/6781d93457c7e578a352fa1574412337/offsec.svg" alt="Offensive Security" class="sponsorLogo" /></a></li>
+<li><a href="https://wargames.ret2.systems/"><img src="/files/3acc989b42e1841896526db25194e861/ret2_black_vector_logo_bold.svg" alt="RET2 WarGames" class="sponsorLogo" /></a></li>
+<li><a href="https://n0h4ts.com/"><img src="/files/0ba2166a8d111207707619394464c357/N0H4TS.png" alt="N0H4TS" class="sponsorLogo" /></a></li>
+<li><a href="https://binary.ninja/"><img src="/files/f0b5365a9856cee9448a86ab4826c6cc/Binary-Ninja.webp" alt="Binary Ninja" class="sponsorLogo" /></a></li>
+</ol>
+<div class="heading">Infrastructure</div>
+<ol class="sponsorsGrid infra">
+<li><a href="https://goo.gle/ctfsponsorship"><img src="/files/b4e75b72ef8c083fd925e65a363389de/gcp.svg" alt="Google Cloud" class="sponsorLogo" style="transform: scale(1)" /></a></li>
+</ol>
+<div class="heading">Organizer</div>
+<ol class="sponsorsGrid organizer">
+<li><a href="https://sekai.1a23.studio/"><img src="/files/bce0a01d75eed005b19ba8ab040fdf86/pjsk.svg" alt="Project SEKAI" class="sponsorLogo" /></a></li>
+</ol>
+</div>
+<style>
+.indexListingsWrapper {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444463;
+}
+
+.heading {
+  color: #3ab0a1;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 2.5em 0;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  display: inline-block;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border: 5px solid #3ab0a1;
+  box-sizing: content-box;
+  border-radius: 3px;
+  vertical-align: 0.075em;
+  transform: rotate(45deg);
+}
+
+.heading::before {
+  margin-right: 0.75rem;
+}
+
+.heading::after {
+  margin-left: 0.75rem;
+}
+
+.prizes {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-decoration: none;
+  color: #444463;
+}
+
+.prizePoolRow {
+  grid-column: 1 / span 3;
+  border: 4px solid #ec6198;
+  border-radius: 1rem;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #b49364;
+  background-color: #fff;
+}
+
+sup {
+  vertical-align: top;
+}
+
+.prizePoolLabel {
+  flex-grow: 1;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.prizePoolValue {
+  text-align: right;
+}
+
+.prizePoolTotal {
+  font-size: 2.5rem;
+  font-weight: 650;
+}
+
+.prizePoolTotal sup {
+  font-size: 0.7em;
+  vertical-align: 0.3em;
+  font-weight: 500;
+}
+
+.prizePoolCash {
+  font-weight: 550;
+  color: #444463;
+}
+
+.prizeCell {
+  --theme-color: #8989a7;
+  border: 3px solid var(--theme-color);
+  border-bottom-width: 5px;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.prizeCellTitle {
+  background-color: var(--theme-color);
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #fff;
+  padding: 0.4rem 0.25rem;
+  font-weight: 550;
+}
+
+.prizeCellValueNumber {
+  font-size: 1.75rem;
+  font-weight: 650;
+}
+
+.prizeCellValue {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.prizeCell5:nth-child(2) {
+  --theme-color: #ccb768;
+}
+.prizeCell5:nth-child(2) .prizeCellValueNumber {
+  color: #b49364;
+}
+
+.prizeCell5:nth-child(3) {
+  --theme-color: #a6a0ba;
+}
+.prizeCell5:nth-child(3) .prizeCellValueNumber {
+  color: #a6a0ba;
+}
+
+.prizeCell5:nth-child(4) {
+  --theme-color: #be8c68;
+}
+.prizeCell5:nth-child(4) .prizeCellValueNumber {
+  color: #a3724f;
+}
+
+.prizeCell5 {
+  grid-column-end: span 1;
+}
+
+.prizeCell1 {
+  grid-column-end: span 3;
+}
+  
+  
+@media (max-width: 700px) {
+  .prizeCell5 {
+    grid-column-end: span 3;
+  }
+
+  .prizeCell2 {
+    grid-column-end: span 3;
+  }
+  .prizes {
+    padding: 1rem;
+  }
+  .prizePoolRow {
+    flex-direction: column;
+  }
+  .prizePoolValue {
+    text-align: center;
+  }
+}
+  
+.sponsorsGrid {
+  text-align: center;
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sponsorsGrid li {
+  display: block;
+}
+
+.sponsorsGrid li a {
+  display: flex;
+  margin: 1rem 1rem;
+  color: #444463;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsorLogo {
+  height: 4rem;
+}
+  
+.sponsorsGrid.infra li:nth-child(1) img {
+  height: 4rem;
+}
+
+.sponsorsGrid.organizer li:nth-child(1) img {
+  height: 7rem;
+}
+
+.sponsorsGrid.artDirection li:nth-child(1) img {
+  height: 6.5rem;
+  margin: -2rem;
+}
+
+
+.sponsorsGrid li a:hover, .sponsorsGrid li a:focus {
+  opacity: 0.6;
+}
+
+@media (min-width: 700px) {
+  .sponsorsGrid li {
+    display: inline-block;
+  }
+  .sponsorsGrid li a {
+    display: inline-flex;
+    margin: 1rem;
+  }
+}
+</style>
+        <div class="homeFiller"></div>
+    </div>
+    <div class="buttonOverlay">
+        <a href="https://discord.gg/6gk7jhCgGX" target="_blank" class="button iconButton shade discordButton" data-tippy-lyrics>
+            <iconify-icon icon="ic:baseline-discord" inline></iconify-icon>
+        </a>
+        
+        <button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+    <iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+    <h2 class="modalHeader">Menu</h2>
+    <div class="modalBody">
+        
+            <a class="button textButton shade primaryIcon" href="/rules">
+                <iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+                <span>Rules</span>
+            </a>
+        
+
+        
+            
+                <a class="button textButton shade primaryIcon" href="/teams">
+                    <iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+                    <span>Teams</span>
+                </a>
+            
+
+            <a class="button textButton shade primaryIcon" href="/users">
+                <iconify-icon icon="ic:baseline-person"></iconify-icon>
+                <span>Users</span>
+            </a>
+        
+
+        
+            <a class="button textButton shade primaryIcon" href="/scoreboard">
+                <iconify-icon icon="mdi:podium"></iconify-icon>
+                <span>Ranking</span>
+            </a>
+        
+
+        <a class="button textButton alternate" href="/">
+            <iconify-icon icon="ic:baseline-home"></iconify-icon>
+            <span>Home</span>
+        </a>
+
+        <a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+            <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            <span>Title</span>
+        </a>
+
+        
+
+            
+                <a class="button textButton alternate" id="mainMenuTitleBtn" href="/register">
+                    <iconify-icon icon="mdi:account-plus"></iconify-icon>
+                    <span>Register</span>
+                </a>
+            
+
+            <a class="button textButton alternate" id="mainMenuTitleBtn" href="/login">
+                <iconify-icon icon="mdi:login-variant"></iconify-icon>
+                <span>Log in</span>
+            </a>
+        
+    </div>
+    <div class="modalFooter">
+        <button class="button textButton shade" id="mainMenuClose">
+            <span>Close</span>
+        </button>
+    </div>
+</dialog>
+        <div class="homeCTAButtons">
+            <a href="/rules" class="button textButton shade homeCTAButton">
+                <iconify-icon icon="material-symbols:menu-book" style="transform: translate(4px, -8px) scale(1.1);"></iconify-icon>
+                <span>Rules</span>
+            </a>
+            
+            
+<a href="/scoreboard" class="button textButton shade homeCTAButton">
+                <iconify-icon icon="mdi:podium" style="transform: translate(4px, -10px) scale(1.1);"></iconify-icon>
+                <span>Rankings</span>
+            </a>            
+<a href="/challenges" class="button textButton shade primary homeCTAButton">
+                <iconify-icon icon="fluent:music-note-2-24-filled" style="transform: translateY(-15px) scale(1.4);"></iconify-icon>
+                <span>Challenges</span>
+            </a>            
+        </div>
+    </div>
+</div>
+
+
+
+<div id="titleScreen" class="hidden">
+    <canvas class="particlesCanvas" id="particlesCanvas" ref="canvasRef"></canvas>
+<div id="sessionSid" class="metadata" data-tippy-lyrics="">50534354-4620-696e-2041-726368697665</div>    <div class="credit metadata">
+        3.5.1.Luna, Powered by CTFd<br />
+        <small>Theme Luna by 1A23 Studio for Project SEKAI CTF<br />
+        <small>This website is in no way affiliated with SEGA, Colorful Palette Inc., Crypton Future Media, INC.</small>
+        </small>
+    </div>
+    <div class="sponsors metadata">
+        <a href="https://ctfd.io" target="_blank" rel="noopener noreferrer" onClick="(e)=> e.stopPropagation()">
+            <img src="/themes/luna/static/img/logos/ctfd.svg?d=0f2d25e4" alt="CTFd" />
+        </a>
+        <a href="https://sekai.1a23.studio" target="_blank" rel="noopener noreferrer" onClick="(e)=> e.stopPropagation()">
+            <img src="/themes/luna/static/img/logos/team2.svg?d=0f2d25e4" style="transform: scale(1.2)" alt="Project SEKAI" />
+        </a>
+        <a href="https://1a23.com" target="_blank" rel="noopener noreferrer" onClick="(e)=> e.stopPropagation()">
+            <img src="/themes/luna/static/img/logos/1a23-sq.svg?d=0f2d25e4" alt="1A23 Studio" />
+        </a>
+    </div>
+    <div class="logoBox">
+        <img src="/files/b7e5e1a74e590c5dfc9724a4313dd198/sekai2_SEKAI_CTF_Wide_Black.svg" alt="Project SEKAI CTF" />
+        <div class="tapToStart"><span class="click">Click</span><span
+                class="tap">Tap</span> to start</div>
+    </div>
+</div>
+
+
+    <script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script>
+    
+<script>
+    const PartileAssets = {
+        pattern1: "/themes/luna/static/img/particles/solid.svg?d=0f2d25e4",
+        pattern2: "/themes/luna/static/img/particles/outline.svg?d=0f2d25e4",
+        pattern3: "/themes/luna/static/img/particles/blur.svg?d=0f2d25e4",
+    };
+</script>
+
+<style>
+    body {
+        --title-bg: url("/themes/luna/static/img/splash-background.svg?d=0f2d25e4");
+        --low-poly-bg: url("/themes/luna/static/img/particles/lowpoly.svg?d=0f2d25e4");
+    }
+</style>
+
+<script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/lodash.a9f8c3c1.js"></script><script defer type="module" src="/themes/luna/static/assets/tippy.esm.67f4ecc9.js"></script><script defer type="module" src="/themes/luna/static/assets/index.41acb6c0.js"></script>
+
+
+    
+
+    <style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=0f2d25e4");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=0f2d25e4");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=0f2d25e4");
+            --inter-variable: url("/themes/luna/static/fonts/InterVariable.woff2?d=0f2d25e4");
+            --inter-variable-italic: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=0f2d25e4");
+        }
+    </style>
+
+    <script>
+  document.querySelectorAll("#tabScoreboard img.cellBodyIcon").forEach(e => e.loading = "lazy");
+</script>
+</body>
+
+</html>

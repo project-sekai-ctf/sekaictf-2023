@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Punkey", "id": 1667}, "date": "2023-08-26T16:48:34.251945+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "Punkey", "id": 3466}, "type": "correct", "id": 5897}], "meta": {"count": 1}}

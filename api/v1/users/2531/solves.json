@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "MountainCarlos", "id": 722}, "date": "2023-08-26T15:41:36.846077+00:00", "challenge_id": 40, "challenge": {"name": "Cosmic Ray", "category": "Pwn", "value": 100, "id": 40}, "user": {"name": "whyno", "id": 2531}, "type": "correct", "id": 5731}], "meta": {"count": 1}}

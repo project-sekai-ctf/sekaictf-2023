@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "fish", "id": 265}, "date": "2023-08-26T01:20:38.920011+00:00", "challenge_id": 7, "challenge": {"name": "cryptoGRAPHy 1", "category": "Cryptography", "value": 100, "id": 7}, "user": {"name": "Zetish", "id": 739}, "type": "correct", "id": 3699}], "meta": {"count": 1}}

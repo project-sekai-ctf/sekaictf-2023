@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project SEKAI CTF 2023</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SekaiCTF 2023" />
+    <meta property="og:description" content="SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team." />
+    <meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+    <meta property="og:type" content="website" />
+	<link rel="shortcut icon" href="/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg">
+    <script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+
+    
+    <link rel="stylesheet" href="/themes/luna/static/assets/main.9dd62106.css">
+    
+
+    
+
+    <script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "e318b656bbae3f61ab453fc45a2c0906624b617726e8de3d3f9c5bc0948c868b",
+            'userMode': "teams",
+            'smallIcon': "/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1692979200,
+            'end': 1693152000,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "ic:baseline-discord", "social_link_url": "https://discord.gg/6gk7jhCgGX", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+
+    <style>
+  @font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+
+@font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+</style>
+</head>
+
+<body>
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+        <filter id="primaryIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="accentIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology"/>
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
+            <feComposite in="flood" in2="morphology" operator="in" result="composite2"/>
+            <feMerge result="merge">
+                    <feMergeNode in="composite2"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+        </filter>
+        <linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+            <stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+        </linearGradient>
+    </svg>
+
+    
+<div class="triangleContainer">
+    <div class="controlRow">
+        <div class="titleContainer">
+            <button class="button iconButton" id="backButton" aria-label="Go back" title="Go back">
+                <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            </button>
+            <div class="titleGroup">
+                <h1 class="title">Teams</h1>
+                <h2 class="subtitle"><span>AkaSec</span></h2>
+            </div>
+        </div>
+        <div class="filler"></div>
+        
+        <button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+    <iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+    <h2 class="modalHeader">Menu</h2>
+    <div class="modalBody">
+        
+            <a class="button textButton shade primaryIcon" href="/rules">
+                <iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+                <span>Rules</span>
+            </a>
+        
+
+        
+            
+                <a class="button textButton shade primaryIcon" href="/teams">
+                    <iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+                    <span>Teams</span>
+                </a>
+            
+
+            <a class="button textButton shade primaryIcon" href="/users">
+                <iconify-icon icon="ic:baseline-person"></iconify-icon>
+                <span>Users</span>
+            </a>
+        
+
+        
+            <a class="button textButton shade primaryIcon" href="/scoreboard">
+                <iconify-icon icon="mdi:podium"></iconify-icon>
+                <span>Ranking</span>
+            </a>
+        
+
+        <a class="button textButton alternate" href="/">
+            <iconify-icon icon="ic:baseline-home"></iconify-icon>
+            <span>Home</span>
+        </a>
+
+        <a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+            <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            <span>Title</span>
+        </a>
+
+        
+
+            
+                <a class="button textButton alternate" id="mainMenuTitleBtn" href="/register">
+                    <iconify-icon icon="mdi:account-plus"></iconify-icon>
+                    <span>Register</span>
+                </a>
+            
+
+            <a class="button textButton alternate" id="mainMenuTitleBtn" href="/login">
+                <iconify-icon icon="mdi:login-variant"></iconify-icon>
+                <span>Log in</span>
+            </a>
+        
+    </div>
+    <div class="modalFooter">
+        <button class="button textButton shade" id="mainMenuClose">
+            <span>Close</span>
+        </button>
+    </div>
+</dialog>
+    </div>
+    <div class="tabs" id="tabbedView">
+        <div class="filler"></div>
+        
+<button class="tab active" data-target="tabMembers">Members</button>
+<button class="tab" data-target="tabSolves">Solves</button>
+<button class="tab" data-target="tabBreakdown">Breakdown</button>
+<button class="tab" data-target="tabTimeline">Timeline</button>
+
+        <div class="filler"></div>
+    </div>
+    <div class="contentWrapper tabbed">
+        
+<div x-data="TeamGraphs" style="height: 100%;">
+<div class="frameContentWrap">
+  
+
+
+</div>
+
+<div class="tabPane" id="tabMembers">
+  <div class="frameContentWrapper">
+
+    <div class="profileDetailGroup">
+      <div class="profileMeta">
+        <div class="profileMetaRow">
+          <span class="chip tall">Team</span>
+          <div class="profileMetaBox" id="team-id" data-ctfd-team-id="944">
+            AkaSec
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="profileRank">
+        <label class="chip">Rank</label>
+        
+        <div class="profileRankNumber">33</div>
+        
+      </div>
+    </div>
+
+    
+
+    <h3 class="sectionTitle">Members</h3>
+    
+    
+    <a class="listItem" href="/users/1248">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/ef5daaf8c86394cdfa7a054850e00871?d=404" data-fallback="https://avatars.dicebear.com/api/initials/SK4RP10N.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">SK4RP10N</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1879">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/63af2b34a7ddf2daf93c260725793af8?d=404" data-fallback="https://avatars.dicebear.com/api/initials/v3lcoro.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">v3lcoro</div>
+        <div>6 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">1402</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1887">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/c4e2e72054fbaf2b9ff947c6dcb63727?d=404" data-fallback="https://avatars.dicebear.com/api/initials/pengu.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">pengu</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">295</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1889">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/ae06e59044bcb9e7c7dea3c503b6cd53?d=404" data-fallback="https://avatars.dicebear.com/api/initials/hel-makh.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">hel-makh</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1976">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/0dc908762f0aa1c1969a96589d9a460d?d=404" data-fallback="https://avatars.dicebear.com/api/initials/haitkadir.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">haitkadir</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2022">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/91a1fd28d522be02b1634491605e4830?d=404" data-fallback="https://avatars.dicebear.com/api/initials/3dnan.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">3dnan</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2135">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/68eab9d64f7196dfc006f9b1d6e90e47?d=404" data-fallback="https://avatars.dicebear.com/api/initials/mz7.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">mz7</div>
+        <div>2 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">200</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2296">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/8405be2b4e9c7d6dc1d7106a9fd3daba?d=404" data-fallback="https://avatars.dicebear.com/api/initials/obmium.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">obmium</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2385">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9a744a9b3894ed6ae06158028284b1bc?d=404" data-fallback="https://avatars.dicebear.com/api/initials/0xissm0x.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">0xissm0x</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2526">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/bc252633d1a308f804ae4c35960d428b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/hakivvi.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">hakivvi</div>
+        <div>2 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">513</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2587">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/7c84333bf52c8ff11433f8a190753d75?d=404" data-fallback="https://avatars.dicebear.com/api/initials/5N0023.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">5N0023</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2734">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/d791140c03e3b5c45a4312541d59d330?d=404" data-fallback="https://avatars.dicebear.com/api/initials/samaqlo.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">samaqlo</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2799">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f969a9bb3237f26d869052c6c117ec65?d=404" data-fallback="https://avatars.dicebear.com/api/initials/beadam.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">beadam</div>
+        <div>1 solve</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2868">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/a8dd27e4c5e08c9b644f81ac5568e8ab?d=404" data-fallback="https://avatars.dicebear.com/api/initials/redaoui.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">redaoui</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2935">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/81c5ccc44cb9f41e5b941f9d5a70af59?d=404" data-fallback="https://avatars.dicebear.com/api/initials/G4ND4LF101.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">G4ND4LF101</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2937">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e83d9ba301f29a32ae8f3760f01e0909?d=404" data-fallback="https://avatars.dicebear.com/api/initials/%D8%A7%D9%84%D9%86%D8%A7%D8%B3%D9%83.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">الناسك</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2939">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/bfb143ae312a0f965b3bb749547ea2cb?d=404" data-fallback="https://avatars.dicebear.com/api/initials/smartboss.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">smartboss</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2947">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/c5a4e1082f815267fe0662e87885ef86?d=404" data-fallback="https://avatars.dicebear.com/api/initials/gu3n1ch.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">gu3n1ch</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2974">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1aedb8d9dc4751e229a335e371db8058?d=404" data-fallback="https://avatars.dicebear.com/api/initials/learnoob.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">learnoob</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/2994">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e3815242c37d71243a0a39e00ab793a4?d=404" data-fallback="https://avatars.dicebear.com/api/initials/vxgxb0nd.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">vxgxb0nd</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/3399">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/03bbacb1db9e3d21858a3f657f22a541?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Th3j4far1.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Th3j4far1</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/3406">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/d2d7e02a0e43d9f71d025b9ce9568c84?d=404" data-fallback="https://avatars.dicebear.com/api/initials/....svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">...</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">2688</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="hidden tabPane" id="tabSolves">
+  <div class="frameContentWrapper">
+    
+    
+    <a class="listItem" href="/challenges#Cosmic Ray-40">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Cosmic Ray</div>
+        <div>Pwn, solved on <time data-time="2023-08-27T09:22:51.897057Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#▻ Survey-15">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▻ Survey</div>
+        <div>Misc, solved on <time data-time="2023-08-27T04:20:02.935586Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#A letter from the Human Resource Management-3">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">A letter from the Human Resource Management</div>
+        <div>Misc, solved on <time data-time="2023-08-27T01:32:23.902150Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">295</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#SSH-51">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">SSH</div>
+        <div>Misc, solved on <time data-time="2023-08-26T20:52:12.695617Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">468</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Infected-30">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Infected</div>
+        <div>Forensics, solved on <time data-time="2023-08-26T15:59:09.619470Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Frog-WAF-42">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Frog-WAF</div>
+        <div>Web, solved on <time data-time="2023-08-26T03:03:45.144859Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">413</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#I love this world-4">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">I love this world</div>
+        <div>Misc, solved on <time data-time="2023-08-26T01:56:15.058214Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Text Sender-12">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Text Sender</div>
+        <div>Pwn, solved on <time data-time="2023-08-25T23:04:34.664061Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">400</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#DEF CON Invitation-20">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">DEF CON Invitation</div>
+        <div>Forensics, solved on <time data-time="2023-08-25T20:25:35.216837Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Purple Sheep And The Apple Rush-35">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Purple Sheep And The Apple Rush</div>
+        <div>PPC, solved on <time data-time="2023-08-25T20:16:45.269713Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">234</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Scanner Service-24">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Scanner Service</div>
+        <div>Web, solved on <time data-time="2023-08-25T17:42:27.000674Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Wiki Game-34">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Wiki Game</div>
+        <div>PPC, solved on <time data-time="2023-08-25T17:41:21.811390Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Azusawa’s Gacha World-32">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Azusawa’s Gacha World</div>
+        <div>Reverse, solved on <time data-time="2023-08-25T17:40:38.945185Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Eval Me-29">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Eval Me</div>
+        <div>Forensics, solved on <time data-time="2023-08-25T17:40:09.676853Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#▶ Sanity Check-1">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▶ Sanity Check</div>
+        <div>Misc, solved on <time data-time="2023-08-25T16:02:41.715849Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">2688</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="hidden tabPane" id="tabBreakdown">
+  <div class="frameContentWrapper progressBarCharts">
+    
+    
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Solve percentages</h3>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+          :style="{ width: `${getSolvePercentage()}%`, 'background-color': 'rgb(0, 209, 64)' }">
+        </div><div class="progress-bar" role="progressbar"
+          :style="{ width: `${getFailPercentage()}%`, 'background-color': 'rgb(207, 38, 0)' }">
+        </div></div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
+        </svg>
+        <small x-text="`Solves (${getSolvePercentage().toFixed(2)}%)`"></small>
+      </div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)" />
+        </svg>
+        <small x-text="`Fails (${getFailPercentage().toFixed(2)}%)`"></small>
+      </div>
+    </div>
+
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Category breakdown</h3>
+      <div class="progress">
+        <template x-for="category in getCategoryBreakdown()" :key="category.name">
+          <div class="progress-bar" role="progressbar"
+            :style="{ width: `${category.percent}%`, 'background-color': category.color }">
+          </div>
+        </template>
+      </div>
+      <template x-for="category in getCategoryBreakdown()" :key="category.name">
+        <div class="progressBarLegend">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="5" :fill="category.color" />
+          </svg>
+          <small x-text="`${category.name} (${category.percent.toFixed(2)}%)`"></small>
+        </div>
+      </template>
+    </div>
+    
+
+  </div>
+</div>
+<div class="hidden tabPane" id="tabTimeline">
+  <div class="chartContainer">
+    
+    <div id="score-graph" x-ref="scoregraph" style="width: 100%; height: 100%;">
+      Loading...
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script>
+    
+
+
+    
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=f7e3d789");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=f7e3d789");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=f7e3d789");
+        --stripe-border: url("/themes/luna/static/img/stripe-border.svg?d=f7e3d789");
+    }
+</style>
+
+
+<script>
+    window.TEAM =
+    {"account_id": 944, "id": 944, "name": "AkaSec", "type": "team"}
+</script>
+
+<script defer type="module" src="/themes/luna/static/assets/module.esm.860ebcbd.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script><script defer type="module" src="/themes/luna/static/assets/userscore.c5e46586.js"></script><script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/scoreboard.a9375541.js"></script><script defer type="module" src="/themes/luna/static/assets/team_profile.465b8b0d.js"></script>
+
+
+    
+
+    <style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=f7e3d789");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=f7e3d789");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=f7e3d789");
+            --inter-variable: url("/themes/luna/static/fonts/InterVariable.woff2?d=f7e3d789");
+            --inter-variable-italic: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=f7e3d789");
+        }
+    </style>
+
+    <script>
+  document.querySelectorAll("#tabScoreboard img.cellBodyIcon").forEach(e => e.loading = "lazy");
+</script>
+</body>
+
+</html>

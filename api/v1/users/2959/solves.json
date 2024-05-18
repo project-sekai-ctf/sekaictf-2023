@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "nerdlabs", "id": 1051}, "date": "2023-08-26T02:46:48.009661+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "znd", "id": 2959}, "type": "correct", "id": 3935}], "meta": {"count": 1}}

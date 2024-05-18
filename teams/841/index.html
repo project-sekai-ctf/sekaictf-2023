@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project SEKAI CTF 2023</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SekaiCTF 2023" />
+    <meta property="og:description" content="SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team." />
+    <meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+    <meta property="og:type" content="website" />
+	<link rel="shortcut icon" href="/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg">
+    <script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+
+    
+    <link rel="stylesheet" href="/themes/luna/static/assets/main.9dd62106.css">
+    
+
+    
+
+    <script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "e318b656bbae3f61ab453fc45a2c0906624b617726e8de3d3f9c5bc0948c868b",
+            'userMode': "teams",
+            'smallIcon': "/files/7c3974678cbb045cea2e75d3bc41ab42/sekai2_SEKAI_CTF_Wide_Black.svg",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1692979200,
+            'end': 1693152000,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2023 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "ic:baseline-discord", "social_link_url": "https://discord.gg/6gk7jhCgGX", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+
+    <style>
+  @font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+
+@font-face {
+  font-family: "InterVar";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2-variations"),
+       url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2");
+  src: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=94ad1831") format("woff2") tech("variations");
+}
+</style>
+</head>
+
+<body>
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+        <filter id="primaryIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="accentIconStroke" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="2 2" in="SourceGraphic"
+                result="morphology" />
+            <feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic"
+                result="morphology1" />
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+            <feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+            <feComposite in="flood" in2="morphology" operator="in"
+                result="composite" />
+            <feComposite in="flood1" in2="morphology1" operator="in"
+                result="composite1" />
+            <feMerge result="merge">
+                <feMergeNode in="composite1" />
+                <feMergeNode in="composite" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology"/>
+            <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
+            <feComposite in="flood" in2="morphology" operator="in" result="composite2"/>
+            <feMerge result="merge">
+                    <feMergeNode in="composite2"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+        </filter>
+        <linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+            <stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+        </linearGradient>
+    </svg>
+
+    
+<div class="triangleContainer">
+    <div class="controlRow">
+        <div class="titleContainer">
+            <button class="button iconButton" id="backButton" aria-label="Go back" title="Go back">
+                <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            </button>
+            <div class="titleGroup">
+                <h1 class="title">Teams</h1>
+                <h2 class="subtitle"><span>Maltese Prison Escapees</span></h2>
+            </div>
+        </div>
+        <div class="filler"></div>
+        
+        <button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+    <iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+    <h2 class="modalHeader">Menu</h2>
+    <div class="modalBody">
+        
+            <a class="button textButton shade primaryIcon" href="/rules">
+                <iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+                <span>Rules</span>
+            </a>
+        
+
+        
+            
+                <a class="button textButton shade primaryIcon" href="/teams">
+                    <iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+                    <span>Teams</span>
+                </a>
+            
+
+            <a class="button textButton shade primaryIcon" href="/users">
+                <iconify-icon icon="ic:baseline-person"></iconify-icon>
+                <span>Users</span>
+            </a>
+        
+
+        
+            <a class="button textButton shade primaryIcon" href="/scoreboard">
+                <iconify-icon icon="mdi:podium"></iconify-icon>
+                <span>Ranking</span>
+            </a>
+        
+
+        <a class="button textButton alternate" href="/">
+            <iconify-icon icon="ic:baseline-home"></iconify-icon>
+            <span>Home</span>
+        </a>
+
+        <a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+            <iconify-icon icon="icon-park-solid:back"></iconify-icon>
+            <span>Title</span>
+        </a>
+
+        
+
+            
+                <a class="button textButton alternate" id="mainMenuTitleBtn" href="/register">
+                    <iconify-icon icon="mdi:account-plus"></iconify-icon>
+                    <span>Register</span>
+                </a>
+            
+
+            <a class="button textButton alternate" id="mainMenuTitleBtn" href="/login">
+                <iconify-icon icon="mdi:login-variant"></iconify-icon>
+                <span>Log in</span>
+            </a>
+        
+    </div>
+    <div class="modalFooter">
+        <button class="button textButton shade" id="mainMenuClose">
+            <span>Close</span>
+        </button>
+    </div>
+</dialog>
+    </div>
+    <div class="tabs" id="tabbedView">
+        <div class="filler"></div>
+        
+<button class="tab active" data-target="tabMembers">Members</button>
+<button class="tab" data-target="tabSolves">Solves</button>
+<button class="tab" data-target="tabBreakdown">Breakdown</button>
+<button class="tab" data-target="tabTimeline">Timeline</button>
+
+        <div class="filler"></div>
+    </div>
+    <div class="contentWrapper tabbed">
+        
+<div x-data="TeamGraphs" style="height: 100%;">
+<div class="frameContentWrap">
+  
+
+
+</div>
+
+<div class="tabPane" id="tabMembers">
+  <div class="frameContentWrapper">
+
+    <div class="profileDetailGroup">
+      <div class="profileMeta">
+        <div class="profileMetaRow">
+          <span class="chip tall">Team</span>
+          <div class="profileMetaBox" id="team-id" data-ctfd-team-id="841">
+            Maltese Prison Escapees
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="profileRank">
+        <label class="chip">Rank</label>
+        
+        <div class="profileRankNumber"><img src="/themes/luna/static/img/ranks/rank-1.svg?d=382bbb56" alt="Rank 1"></div>
+        
+      </div>
+    </div>
+
+    
+
+    <h3 class="sectionTitle">Members</h3>
+    
+    
+    <a class="listItem" href="/users/1647">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/2734b070f2ade5b4b6af4abdbaad3644?d=404" data-fallback="https://avatars.dicebear.com/api/initials/bquanman.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">bquanman</div>
+        <div>4 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">731</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1649">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/cc11afc7a2dc91baf3b671b0b92520c1?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Maltese+Prison+Escapees.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Maltese Prison Escapees</div>
+        <div>31 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">9686</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/users/1985">
+      
+      
+      <div class="listItemDetailsIcon">
+        <img width="60" height="60" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9c572876bbc621daf8b95eb0122fb039?d=404" data-fallback="https://avatars.dicebear.com/api/initials/TheSavageTeddy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+      </div>
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">TheSavageTeddy</div>
+        <div>0 solves</div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">0</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">10417</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="hidden tabPane" id="tabSolves">
+  <div class="frameContentWrapper">
+    
+    
+    <a class="listItem" href="/challenges#Mikusweeper-19">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Mikusweeper</div>
+        <div>PPC, solved on <time data-time="2023-08-27T15:27:42.434698Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">372</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#[Blockchain] Play for Free-46">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">[Blockchain] Play for Free</div>
+        <div>Misc, solved on <time data-time="2023-08-27T13:44:47.902559Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">496</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Algorithm Multitool-50">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Algorithm Multitool</div>
+        <div>Pwn, solved on <time data-time="2023-08-27T08:46:06.955986Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">500</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#▻ Survey-15">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▻ Survey</div>
+        <div>Misc, solved on <time data-time="2023-08-27T03:12:57.420982Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#QR God-18">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">QR God</div>
+        <div>Misc, solved on <time data-time="2023-08-27T02:22:49.038850Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">484</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Chunky-33">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Chunky</div>
+        <div>Web, solved on <time data-time="2023-08-27T02:20:45.659635Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">475</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Sahuang Flag Checker-38">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Sahuang Flag Checker</div>
+        <div>Reverse, solved on <time data-time="2023-08-27T01:24:51.359504Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">484</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Noisier CRC-17">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Noisier CRC</div>
+        <div>Cryptography, solved on <time data-time="2023-08-26T21:04:39.553259Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">495</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#[Blockchain] Re-Remix-31">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">[Blockchain] Re-Remix</div>
+        <div>Misc, solved on <time data-time="2023-08-26T19:03:11.724687Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">493</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Cosmic Ray-40">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Cosmic Ray</div>
+        <div>Pwn, solved on <time data-time="2023-08-26T15:45:07.905747Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#RandSubWare-21">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">RandSubWare</div>
+        <div>Cryptography, solved on <time data-time="2023-08-26T12:04:58.916155Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">498</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Conquest of Camelot-43">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Conquest of Camelot</div>
+        <div>Reverse, solved on <time data-time="2023-08-26T07:51:07.647908Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">491</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Golf Jail-48">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Golf Jail</div>
+        <div>Web, solved on <time data-time="2023-08-26T06:12:49.330276Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">475</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Dumpster Dive-37">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Dumpster Dive</div>
+        <div>Forensics, solved on <time data-time="2023-08-26T06:06:47.261988Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">431</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Purple Sheep And The Apple Rush-35">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Purple Sheep And The Apple Rush</div>
+        <div>PPC, solved on <time data-time="2023-08-26T01:24:54.428484Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">234</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Text Sender-12">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Text Sender</div>
+        <div>Pwn, solved on <time data-time="2023-08-25T23:28:09.350505Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">400</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Frog-WAF-42">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Frog-WAF</div>
+        <div>Web, solved on <time data-time="2023-08-25T22:38:53.022601Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">413</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Teyvat Travel Guide-14">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Teyvat Travel Guide</div>
+        <div>Reverse, solved on <time data-time="2023-08-25T22:36:40.189501Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">400</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#A letter from the Human Resource Management-3">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">A letter from the Human Resource Management</div>
+        <div>Misc, solved on <time data-time="2023-08-25T21:55:14.887837Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">295</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#cryptoGRAPHy 3-9">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">cryptoGRAPHy 3</div>
+        <div>Cryptography, solved on <time data-time="2023-08-25T21:41:41.348532Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">400</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Infected-30">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Infected</div>
+        <div>Forensics, solved on <time data-time="2023-08-25T21:36:28.597949Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#cryptoGRAPHy 2-8">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">cryptoGRAPHy 2</div>
+        <div>Cryptography, solved on <time data-time="2023-08-25T20:16:36.177684Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">176</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Network Tools-11">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Network Tools</div>
+        <div>Pwn, solved on <time data-time="2023-08-25T20:06:26.339115Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Just Another Pickle Jail-45">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Just Another Pickle Jail</div>
+        <div>Misc, solved on <time data-time="2023-08-25T20:04:02.391172Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">499</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#I love this world-4">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">I love this world</div>
+        <div>Misc, solved on <time data-time="2023-08-25T18:57:18.890815Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Diffecientwo-10">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Diffecientwo</div>
+        <div>Cryptography, solved on <time data-time="2023-08-25T18:43:06.616537Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">484</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#DEF CON Invitation-20">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">DEF CON Invitation</div>
+        <div>Forensics, solved on <time data-time="2023-08-25T18:33:30.467751Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Scanner Service-24">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Scanner Service</div>
+        <div>Web, solved on <time data-time="2023-08-25T17:54:55.016078Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Guardians of the Kernel-26">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Guardians of the Kernel</div>
+        <div>Reverse, solved on <time data-time="2023-08-25T17:54:47.184459Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#cryptoGRAPHy 1-7">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">cryptoGRAPHy 1</div>
+        <div>Cryptography, solved on <time data-time="2023-08-25T17:51:26.557866Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Eval Me-29">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Eval Me</div>
+        <div>Forensics, solved on <time data-time="2023-08-25T17:49:55.336760Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Azusawa’s Gacha World-32">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Azusawa’s Gacha World</div>
+        <div>Reverse, solved on <time data-time="2023-08-25T17:46:49.318573Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Wiki Game-34">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Wiki Game</div>
+        <div>PPC, solved on <time data-time="2023-08-25T16:48:57.588981Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">100</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#Noisy CRC-16">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">Noisy CRC</div>
+        <div>Cryptography, solved on <time data-time="2023-08-25T16:35:43.881989Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">244</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    <a class="listItem" href="/challenges#▶ Sanity Check-1">
+      <div class="listItemDetails">
+        <div class="listItemDetailsPrimary">▶ Sanity Check</div>
+        <div>Misc, solved on <time data-time="2023-08-25T16:03:50.928446Z"></time></div>
+      </div>
+      <div class="listItemScore digits5">
+        <span>
+          <span class="listItemScoreValue">39</span>&nbsp;<span class="listItemScoreP">P</span>
+        </span>
+      </div>
+    </a>
+    
+    
+
+  </div>
+  <div class="totalScore">
+    <div class="frameContentWrapper">
+      <span class="totalScorePrompt">Total score</span>
+      <span class="totalScoreDisplay">
+        <span class="totalScoreValue">10417</span>&nbsp;<span class="totalScoreP">P</span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="hidden tabPane" id="tabBreakdown">
+  <div class="frameContentWrapper progressBarCharts">
+    
+    
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Solve percentages</h3>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+          :style="{ width: `${getSolvePercentage()}%`, 'background-color': 'rgb(0, 209, 64)' }">
+        </div><div class="progress-bar" role="progressbar"
+          :style="{ width: `${getFailPercentage()}%`, 'background-color': 'rgb(207, 38, 0)' }">
+        </div></div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
+        </svg>
+        <small x-text="`Solves (${getSolvePercentage().toFixed(2)}%)`"></small>
+      </div>
+      <div class="progressBarLegend">
+        <svg height="16" width="16">
+          <circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)" />
+        </svg>
+        <small x-text="`Fails (${getFailPercentage().toFixed(2)}%)`"></small>
+      </div>
+    </div>
+
+    <div class="progressBarChart">
+      <h3 class="sectionTitle">Category breakdown</h3>
+      <div class="progress">
+        <template x-for="category in getCategoryBreakdown()" :key="category.name">
+          <div class="progress-bar" role="progressbar"
+            :style="{ width: `${category.percent}%`, 'background-color': category.color }">
+          </div>
+        </template>
+      </div>
+      <template x-for="category in getCategoryBreakdown()" :key="category.name">
+        <div class="progressBarLegend">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="5" :fill="category.color" />
+          </svg>
+          <small x-text="`${category.name} (${category.percent.toFixed(2)}%)`"></small>
+        </div>
+      </template>
+    </div>
+    
+
+  </div>
+</div>
+<div class="hidden tabPane" id="tabTimeline">
+  <div class="chartContainer">
+    
+    <div id="score-graph" x-ref="scoregraph" style="width: 100%; height: 100%;">
+      Loading...
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script>
+    
+
+
+    
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=382bbb56");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=382bbb56");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=382bbb56");
+        --stripe-border: url("/themes/luna/static/img/stripe-border.svg?d=382bbb56");
+    }
+</style>
+
+
+<script>
+    window.TEAM =
+    {"account_id": 841, "id": 841, "name": "Maltese Prison Escapees", "type": "team"}
+</script>
+
+<script defer type="module" src="/themes/luna/static/assets/module.esm.860ebcbd.js"></script><script defer type="module" src="/themes/luna/static/assets/base.9def3074.js"></script><script defer type="module" src="/themes/luna/static/assets/userscore.c5e46586.js"></script><script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/scoreboard.a9375541.js"></script><script defer type="module" src="/themes/luna/static/assets/team_profile.465b8b0d.js"></script>
+
+
+    
+
+    <style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=382bbb56");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=382bbb56");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=382bbb56");
+            --inter-variable: url("/themes/luna/static/fonts/InterVariable.woff2?d=382bbb56");
+            --inter-variable-italic: url("/themes/luna/static/fonts/InterVariable-Italic.woff2?d=382bbb56");
+        }
+    </style>
+
+    <script>
+  document.querySelectorAll("#tabScoreboard img.cellBodyIcon").forEach(e => e.loading = "lazy");
+</script>
+</body>
+
+</html>

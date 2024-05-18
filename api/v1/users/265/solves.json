@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Team_404_Not_Found", "id": 145}, "date": "2023-08-27T15:27:03.978705+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "y0d3n", "id": 265}, "type": "correct", "id": 8128}], "meta": {"count": 1}}

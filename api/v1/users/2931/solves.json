@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "c00c00", "id": 1401}, "date": "2023-08-25T23:28:35.034981+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "frevadiscor", "id": 2931}, "type": "correct", "id": 3410}], "meta": {"count": 1}}

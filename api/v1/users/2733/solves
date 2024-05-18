@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "RedHazzarTeam", "id": 787}, "date": "2023-08-25T21:38:22.969934+00:00", "challenge_id": 34, "challenge": {"name": "Wiki Game", "category": "PPC", "value": 100, "id": 34}, "user": {"name": "ConnectionDrill", "id": 2733}, "type": "correct", "id": 2996}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "TCP1P", "id": 847}, "date": "2023-08-25T17:41:36.275962+00:00", "challenge_id": 24, "challenge": {"name": "Scanner Service", "category": "Web", "value": 100, "id": 24}, "user": {"name": "ganezo", "id": 1679}, "type": "correct", "id": 1722}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "NSFW", "id": 743}, "date": "2023-08-26T17:51:37.024364+00:00", "challenge_id": 20, "challenge": {"name": "DEF CON Invitation", "category": "Forensics", "value": 100, "id": 20}, "user": {"name": "ScottKushy", "id": 2821}, "type": "correct", "id": 6053}], "meta": {"count": 1}}

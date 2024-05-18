@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "Skill Issue", "id": 528}, "date": "2023-08-27T01:09:34.216186+00:00", "challenge_id": 42, "challenge": {"name": "Frog-WAF", "category": "Web", "value": 413, "id": 42}, "user": {"name": "DubonCafe", "id": 1007}, "type": "correct", "id": 6839}], "meta": {"count": 1}}

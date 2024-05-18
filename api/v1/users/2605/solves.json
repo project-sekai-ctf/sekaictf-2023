@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"name": "BelRedDaemons", "id": 429}, "date": "2023-08-26T05:48:00.434004+00:00", "challenge_id": 16, "challenge": {"name": "Noisy CRC", "category": "Cryptography", "value": 244, "id": 16}, "user": {"name": "jeane", "id": 2605}, "type": "correct", "id": 4365}], "meta": {"count": 1}}
